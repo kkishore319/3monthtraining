@@ -1,0 +1,13 @@
+package co.kishore;
+
+public class Ascii {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char ch='K';
+		int val=ch;
+		System.out.println("Ascii value of "+ch+" is "+val);
+
+	}
+
+}
