@@ -1,5 +1,4 @@
-package co.win;
-
+package co.kishore.day2;
 
 class foundation{
 	private void show1()

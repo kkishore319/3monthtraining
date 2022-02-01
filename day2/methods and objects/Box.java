@@ -1,7 +1,4 @@
-package co.win;
-
-
-
+package co.kishore.day2;
 class vol{
 	double vol(double width,double height,double depth)
 	{
@@ -16,4 +13,3 @@ public class Box {
 		System.out.println("The volume of the box "+res);
 	}
 }
-
