@@ -5,7 +5,7 @@ class MyException extends Exception {
 
 	MyException(String messge) {
 
-		super(messge);// calling the super class constructor of EXception
+		super(messge);// calling the super class constructor of Exception
 
 	}
 
