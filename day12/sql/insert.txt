@@ -1,0 +1,50 @@
+insert
+
+1. Write a SQL statement to insert a record with your own value into the table countries against each column.
+ans. 	insert into countries(country_id,country_name,region_id)
+	values('c1','india',1000);
+
+Here in the following is the structure of the table countries.
+
+    Column    |         Type          | Modifiers
+--------------+-----------------------+-----------
+ country_id   | character varying(2)  |
+ country_name | character varying(40) |
+ region_id    | numeric(10,0)         |
+ 
+
+
+2. Write a SQL statement to insert one row into the table countries against the column country_id and country_name.
+ans. 	insert into countries(country_id,country_name)
+	values('c2','china');
+
+Here in the following is the structure of the table countries.
+
+    Column    |         Type          | Modifiers
+--------------+-----------------------+-----------
+ country_id   | character varying(2)  |
+ country_name | character varying(40) |
+ region_id    | numeric(10,0)         |
+Click me to see the solution
+
+3. Write a SQL statement to create duplicates of countries table named country_new with all structure and data.
+ans. 	create table country_new
+	as countries;
+Here in the following is the structure of the table countries.
+
+    Column    |         Type          | Modifiers
+--------------+-----------------------+-----------
+ country_id   | character varying(2)  |
+ country_name | character varying(40) |
+ region_id    | numeric(10,0)         |
+Click me to see the solution
+
+4. Write a SQL statement to insert NULL values into region_id column for a row of countries table.
+ans. 	insert into countries(region_id)
+	values(null);
+
+Click me to see the solution
+
+5. Write a SQL statement to insert 3 rows by a single insert statement.
+ans. 	insert into countries(country_id, country_name, region_id)
+	values('c3','lanka',1003),('c4','usa',1004),('c5','uk',1005);
