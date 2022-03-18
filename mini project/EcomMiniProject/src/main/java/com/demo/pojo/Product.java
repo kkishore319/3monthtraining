@@ -12,9 +12,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Component
 @Entity
@@ -37,7 +40,11 @@ public class Product {
 	@JoinTable(name = "product_rating", joinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "rating_id"))
 	private Collection<Rating> rating;
 	
-
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "brand_id", referencedColumnName = "id")
+    @JsonIgnoreProperties("productList")
+	private Brand brands;
+	
 	public long getId() {
 		return id;
 	}
@@ -86,6 +93,14 @@ public class Product {
 
 	public void setRating(Collection<Rating> rating) {
 		this.rating = rating;
+	}
+
+	public Brand getBrands() {
+		return brands;
+	}
+
+	public void setBrands(Brand brands) {
+		this.brands = brands;
 	}
 
 }
