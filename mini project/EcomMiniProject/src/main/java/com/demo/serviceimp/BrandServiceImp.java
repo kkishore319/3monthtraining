@@ -3,12 +3,16 @@ package com.demo.serviceimp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.demo.pojo.Brand;
 import com.demo.pojo.Product;
 import com.demo.prodrepositary.BrandRepositary;
 import com.demo.service.BrandService;
 
+@Component
+@Repository
 public class BrandServiceImp implements BrandService{
 	
 	@Autowired
